@@ -1,0 +1,729 @@
+body, html {
+    background-color: #020510;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.header {
+    width: 100%;
+    height: 8%;
+    background-color: #020510;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+}
+
+.menu-icon {
+    display: none;
+    /* 为菜单图标添加其他需要的样式 */
+}
+
+.menu-icon img{
+    height: 40px !important;
+    width: 40px;
+}
+.close-icon {
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    /* 添加其他你需要的样式，比如大小、颜色等 */
+}
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020510;
+    flex-direction: column;
+}
+
+.header-right {
+    width:100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header img{
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 53px;
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav {
+    margin-left: 5%;
+    width: 50%;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: rgb(235, 235, 235);
+}
+
+.nav p{
+    cursor: pointer;
+    position: relative;
+}
+.nav p:hover {   
+    color: #ff2b78;
+    margin-top: 16px;
+    font-weight: 400;
+    line-height: 4.5rem;
+    transition: color 0.5s ease;
+}
+.nav p::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* 位于p的底部 */
+    left: 50%; /* 从中间开始 */
+    transform: translateX(-50%); /* 确保它真正从中心开始 */
+    width: 0; /* 初始宽度为0 */
+    height: 3px; /* 和你的border-bottom一样高 */
+    background-color: #ff2b78;
+    transition: width 0.3s ease; /* 这里的过渡效果是宽度变化 */
+}
+.nav p:hover::before {
+    width: 100%; /* 鼠标悬停时，宽度变为100%，从而实现从中间向外的效果 */
+}
+
+
+
+.search {
+    height: 36px;
+    width: 20%;
+    border-radius: 6px;
+    border: 1px #464751 solid;
+    background-color: #020510;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* 边框包括在总宽度和高度内 */
+    color: white;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    width: 180px;
+    height: 36px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff2b78;
+    color: white;
+    cursor: pointer;
+}
+
+/* menu mobile */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav {
+        line-height: 3;
+        height: 80%;
+        font-size: 1.4rem !important;
+        margin-top: 10%;
+        margin-left: 10%;
+        width: 100%;
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items:flex-start;
+        color: rgb(235, 235, 235);
+    }
+    .search{
+        margin-top: 20px;
+        font-size: 1.2rem;
+        width: 80%;
+        height: 6%;
+        margin-left: 10%;
+    }
+}
+
+
+
+
+.item002{
+    font-weight: 100;
+    margin: auto;
+    height: 198px;
+    width: 1056px;
+    box-sizing: border-box;
+}
+
+.item002-1{
+    font-weight: 10;
+    color: white;
+    height: 63px;
+    display: flex;
+}
+
+.item002-1 h2{
+    font-weight: 10;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 15px;
+}
+.item002-1 h1{
+    font-weight: 10;
+    font-size: 4.7rem;
+    margin: 0;
+    margin-top: 0px;
+    margin-left: 8px;
+}
+.item002-1 h3{
+    font-weight: 10;
+    font-size: 26px;
+    margin: 0;
+    margin-top: 0px;
+}
+.item002-1 p{
+    font-size: 14px;
+    margin: 0;
+    margin-top: 0px;
+}
+
+.item002-2{
+    margin-top: -10px;
+    height:26px;
+    border-bottom: #272729 8px solid;
+}
+
+.item002-3{
+    margin-top: 4px;
+    height: 104px;
+    display: flex;
+}
+@media (max-width: 768px){
+    .item002-1{
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    .item002-1 h2{
+        font-size: 1.5rem;
+    }
+    .item002-1 h1{
+        font-size: 3.7rem;
+    }
+    .item002-1 h3{
+        white-space: nowrap;
+        font-size: 1.7rem;
+    }
+    .item002-3{
+        display:block;
+        
+    }
+}
+
+.item-gap{
+    margin-left: 17px;
+    margin-right: 16px;
+    font-size: 0;
+    height: 63px;
+    width: 686px;
+}
+
+.item-gap span{
+    margin-top: 5px;
+    width: 686px;
+    height: 8px;
+    background-color: #534f49;
+    display: inline-block; /* 将display属性设置为inline-block允许你在内联元素上设置宽度和高度，同时保持元素在文本流中的内联行为。 */
+}
+@media (max-width: 768px){
+    .item-gap{
+        margin-right:0px;
+    }
+    .item-gap span{
+        width: 74%;
+        background-color: white;
+        height: 6px;
+    }
+}
+
+.item-class1{
+    display: flex;
+    align-items: center;
+    border-left: 14px #f94c00 solid ;
+    background: linear-gradient(-60deg, #d1881a 50%, #b14700 50%);
+    width: 534px;
+    height: 104px;
+}
+.icon-1{
+    animation: rotate 6s linear 0s infinite;
+    
+    margin-left: 36%;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+    border: black 3px solid;
+    background-color: #f94c00;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-1 img {
+    width: 56px;
+    height: 56px;
+}
+
+.icon-2 img {
+    width: 56px;
+    height: 56px;
+}
+
+.icon-2{
+    animation: rotate 10s linear 0s infinite;
+    margin-left: 10px;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+    border: black 3px solid;
+    background-color: #be2424;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px){
+    .item002{
+        height: 560px;
+        width: 100%;
+    }
+    .item002-3{
+        flex-direction: column;
+        width: 100%;
+    }
+    .item-class1{
+        width:100%;
+        height: 104px;
+    }
+    .class-left{
+        width: 10%;
+    }
+    .icon-1{
+        margin-left: 50%;
+        height: 58px;
+        width: 58px;
+    }
+    .icon-2{
+        
+        height: 58px;
+        width: 58px;
+    }
+
+}
+
+.class-containment{
+    color: #ffffff;
+    white-space: nowrap;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+
+.class-containment h4, .class-containment2 h4, .class-containment3 h4, .class-containment4 h4{
+    color: #ffffff;
+    font-weight: 10;
+    margin: 0;
+    margin-top: -2px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.1rem;
+    color: white;
+}
+
+.class-containment p, .class-containment2 p, .class-containment3 p, .class-containment4 p{
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.class-containment2{
+    white-space: nowrap;
+    margin-left: 14px;
+    margin-top: 0px;
+}
+
+.item-class2{
+    margin-left: 10px;
+    width: 352px;
+    height: 104px;
+}
+@media (max-width: 768px){
+    .item-class2{
+        margin-left:0px;
+        width: 100%;
+    }
+}
+
+.class-containment3{
+    height: 51px;
+    width: 100%;
+    margin-bottom: 3px;
+    background-color: #122602;
+    border-left: 14px #397a05 solid;
+    margin-top: 0px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.class-containment4{
+    height: 51px;
+    width: 100%;
+    margin-bottom: 3px;
+    background-color: #121213;
+    border-left: 14px #397a05 solid;
+    margin-top: 0px;
+    padding-left: 10px;
+    display: flex;
+}
+@media (max-width: 768px){
+    .class-containment3{
+        margin-top: 3px;
+        height: 61px;
+        align-items: center;
+    }
+    .class-containment4{
+        height: 61px;
+        align-items: center;
+    }
+}
+
+.icon-3{
+    animation: rotate 5s linear 0s infinite;
+    margin-left: 41%;
+    height: 47px;
+    width: 47px;
+    border-radius: 50px;
+    border: black 3px solid;
+    background-color: #397a05;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-4{
+    animation: rotate 9s linear 0s infinite;
+    margin-left: 55%;
+    height: 47px;
+    width: 47px;
+    border-radius: 50px;
+    border: black 3px solid;
+    background-color: #3b3b40;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-3 img {
+    height: 45px;
+    width: 45px;
+}
+
+.icon-4 img {
+    height: 45px;
+    width: 45px;
+}
+@media (max-width: 768px){
+    .icon-3{
+        margin-right: 10%;
+    }
+    .icon-4{
+        margin-right: 10%;
+    }
+}
+
+.item-class3{
+    position: relative; /* 设置为相对定位 */
+    background-image: url(/images/cross.svg);
+    height: 104px;
+    width: 104px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px){
+    .item-class3{
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        margin-top: 50px;
+    }
+}
+
+.icon-top, .icon-left, .icon-right, .icon-down {
+    position: absolute; /* 设置为绝对定位，以便定位到正确的位置 */
+    height: 30%; /* 使用百分比根据父元素的高度调整大小 */
+    width: 30%; /* 使用百分比根据父元素的宽度调整大小 */
+    border-radius: 50px;
+    border: black 1px solid;
+}
+
+.icon-top{
+    background-color: #f94c00;
+    top: 5%; /* 顶部对齐 */
+
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.icon-left{
+    background-color: #be2424;
+    left: 5%; /* 左侧对齐 */
+
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+.icon-right{
+    background-color: #397a05;
+    right: 5%; /* 右侧对齐 */
+
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+.icon-down{
+    background-color: #3b3b40;
+    bottom: 5%; /* 底部对齐 */
+
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+
+
+
+
+
+.top-pic img{
+
+    width: 100%; /* 使图片宽度响应式地调整到容器的宽度 */
+    max-width: 100%; /* 限制图片的最大宽度，避免它超出屏幕 */
+    height: auto; /* 保持图片的原始宽高比 */
+}
+
+.scp-content{
+    margin-top: 60px;
+    font-size: 1.2rem;
+    color: white;
+    width:80%;
+    margin: auto;
+    line-height: 1.8rem;
+}
+
+.updateBTN{
+    border-radius: 10px;
+    background-color: #ff2b78;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.deleteBTN{
+    border-radius: 10px;
+    background-color: #132bff;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.udBTN{
+    height:80px;
+    margin-bottom: 50px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.left-section {
+    margin-top: 15rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+.left-section p{
+    font-size: 1.4rem;
+    line-height: 0;
+}
+
+.left-section strong{
+    color: #ff2b78;
+    font-weight: 100;
+    font-size: 1.4rem;
+    line-height: 0
+}
+
+h1 {
+    font-size: 5.6rem;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 3px;
+    animation: glow 2.5s infinite alternate; /* infinite 无线循环， alternate 动画结束时反转 */
+}
+
+/* glow animate */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff2b78;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff2b78;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff2b78;
+    }
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    line-height: 0
+}
+
+.social-icon{
+    margin-top: 40px;
+    width: 46%;
+    display: flex;
+    justify-content:space-around;
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+    .left-section{
+        height: 90%;
+    }
+    .left-section p{
+        font-size: 0.8rem;
+    }
+    .left-section strong{
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.0rem;
+    }
+    .social-icon{
+        margin-top: 10px;
+        width: 60%;
+        display: flex;
+        justify-content:space-around;
+    
+    }
+    .social-icon img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .content {
+        margin: auto;
+        display: flex;
+        height: 92%;
+        width: 100%;
+        border-radius: 20px;
+        background: radial-gradient(circle 78vw at 10% 90%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
+                    radial-gradient(circle 88vw at 0% 0%, rgba(9,3,28,0.9), #09031c, transparent 60%, transparent),
+                    radial-gradient(circle 148vw at 30% 10%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
+                    radial-gradient(circle 148vw at 80% 40%, rgba(105,36,73,0.8), #09031c, transparent 60%, transparent);
+        background-repeat: no-repeat; /* 防止渐变重复 */
+    }
+    
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background: radial-gradient(circle 58vw at 10% 90%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
+                radial-gradient(circle 88vw at 0% 0%, rgba(9,3,28,0.9), #09031c, transparent 60%, transparent),
+                radial-gradient(circle 58vw at 60% 10%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
+                radial-gradient(circle 78vw at 60% 90%, rgba(105,36,73,0.8), #09031c, transparent 60%, transparent);
+    background-repeat: no-repeat; /* 防止渐变重复 */
+}
+
+@media only screen and (max-width: 375px){
+    .left-section{
+        height: 200%;
+    }
+    .left-section p{
+        font-size: 0.9rem;
+    }
+    .left-section strong{
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 3.4rem;
+        line-height: 1.2;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    .social-icon{
+        margin-top: 40px;
+        width: 70%;
+        display: flex;
+        justify-content:space-around;
+    
+    }
+    .social-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    
+.item-level{
+    font-size: 1.5rem ; 
+}
